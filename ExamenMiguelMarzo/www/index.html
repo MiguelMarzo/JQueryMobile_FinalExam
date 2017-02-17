@@ -1,29 +1,252 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html>
-    <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-    <!--
-        Personalice la directiva de seguridad de contenido en la etiqueta meta como sea necesario. Agregue "unsafe-inline" a default-src para permitir JavaScript insertado.
-        Para obtener m�s detalles, consulte http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>ExamenMiguelMarzo</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Conectando con el dispositivo</p>
-                <p class="event received">El dispositivo est� preparado</p>
+<head>
+    <meta charset="utf-8">
+    <title>Examen EV02</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+
+    <!--PAGINA 0 INDICE GENERAL-->
+    <div id="page" data-role="page">
+        <div data-role="header">
+            <h1>SELVA DE IRATI </h1>
+        </div>
+        <div data-role="content">
+            <img src="images/panoramica.jpg" /><br/><br/>
+            <ul data-role="listview">
+                <li><a href="#page1" data-transition="flip"><img src="images/hoja.png" class="ui-li-icon" />Bienvenida</a></li>
+                <li><a href="#page2" data-transition="fade"><img src="images/hoja.png" class="ui-li-icon" />Especies</a></li>
+                <li><a href="#page3" data-transition="slide"><img src="images/hoja.png" class="ui-li-icon" />Reservas</a></li>
+                <li><a href="#page4" data-transition="pop"><img src="images/hoja.png" class="ui-li-icon" />Galería</a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>Cuatrovientos</h4>
+        </div>
+    </div>
+
+    <!--PAGINA 1 BIENVENIDA-->
+    <div id="page1" data-role="page" data-fullscreen="true">
+        <div data-role="header" data-position="fixed">
+            <h2>Bienvenidos</h2>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page2" class="ui-btn-active">Recorridos</a></li>
+                    <li><a href="#page3">Reservas</a></li>
+                    <li><a href="#page4">Galería</a></li>
+                </ul>
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script type="text/javascript" src="scripts/index.js"></script>
-    </body>
+        <div class="bienvenida" data-role="content">
+            <p>El Bosque o Selva de Irati (Iratiko oihana en euskera) es un bosque repartido entre el norte de Navarra (España) y Pirineos Atlánticos (Sola y Baja Navarra) en al suroeste de Francia.</p>
+            <p>Se trata de la mayor masa forestal de Navarra y uno de los mayores y mejor conservados bosques de hayas (Fagus sylvatica) y abetos (Abies alba) de toda Europa. A pesar de ser un bosque explotado forestalmente desde los siglos XVI-XVII, el respeto y el buen hacer de los habitantes de estos valles ha hecho que se conserve en total plenitud. </p>
+             <p>" El bosque de bosques " <br/> El invierno en pleno esplendor en la Selva de Irati disfruta de este impresionante hayedo abetal que es la selva de Irati.Este mes de febrero disfruta de este paraíso natural que es la selva de Irati y toda Navarra</p>
+        </div>
+        <div data-role="footer" data-position="fixed" data-fullscreen="true">
+            <h4><a href="#page" data-role="button" class="ui-btn ui-icon-home ui-btn-icon-top">Inicio</a></h4>
+        </div>
+    </div>
+
+    <!--PAGINA 2-->
+    <div id="page2" data-role="page" data-add-back-btn="true">
+        <div data-role="header">
+            <a class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back">Atrás</a><!-- ¡No añadir HREF en este enlace! -->
+            <h1>Recorridos</h1>
+        </div>
+        <div data-role="content">
+            <p>La selva de Irati ofrece a los visitantes diversas posibilidades de disfrutar de un entorno natural incomparable:</p>
+            <div data-role="collapsible-set">
+                <div data-role="collapsible">
+                    <h2>Orbaizeta <span class="ui-li-count">4</span></h2>
+                     <img src="images/orbaizeta.jpg" width="290" height="200" alt="" />
+                    <select data-native-menu="false">
+                        <option value="choose">Comienza desde...</option>
+                        <option value="azpegui">Refugio Azpegui</option>
+                        <option value="fabrica-armas">Fabrica de armas</option>
+                        <option value="mendilatz">Albergue Mendilatz</option>
+                        <option value="arrazola">Arrazola</option>
+                    </select>
+                </div>
+                <div data-role="collapsible">
+                    <h2>Ochagavia <span class="ui-li-count">2</span></h2>
+                    <img src="images/ochagavia.jpg" width="290" height="200" alt="" />
+                    <select data-native-menu="false">
+                        <option value="choose">Comienza desde...</option>
+                        <option value="azpegui">Alto de tapla</option>
+                        <option value="fabrica-armas">Estación Abodi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4 >Cuatrovientos</h4>
+        </div>
+    </div>
+
+    <!--PAGINA 3-->
+    <div id="page3" data-role="page" data-add-back-btn="true">
+        <div data-role="header">
+            <a class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back">Atrás</a><!-- ¡No añadir HREF en este enlace! -->
+            <h1>Reservas</h1>
+        </div>
+        <div data-role="content">
+            <p>La visita normal se realiza por la pista de tierra que en un recorrido circular te permite ver los más característicos rincones de la zona de La Blanca rodeando el Polígono de Tiro de la Aviación.</p>
+            <p>En tu visita en coche, has de cumplir determinadas normas, como la velocidad limitada a 40 kilómetros por hora, o no poder detenerte nada más que en las zonas habilitadas y señalizadas como aparcamiento.</p>
+            <h2>Horarios y reservas</h2>
+            <div data-role="collapsible-set">
+                <div data-role="collapsible">
+                    <h3>Visitas con guía:</h3>
+                    <p>Horarios:</p>
+                    <div class="tablas ui-grid-a">
+                        <div class="tablas ui-block-a">Temporada de Verano</div>
+                        <div class="tablas ui-block-b">Temporada de Invierno</div>
+                        <div class="tablas ui-block-a">
+                            <p>
+                                10:0
+                                0-13:00
+                            </p>
+                            <p>16:00-19:00</p>
+                        </div>
+                        <div class="tablas ui-block-b">
+                            <p>&nbsp;</p>
+                            <p class="horarios">11:00-14:00</p>
+                        </div>
+                    </div>
+                    <p>Tarifas:</p>
+                    <div class="tablas ui-grid-c">
+                        <div class="tablas ui-block-a">Individual:</div>
+                        <div class="tablas ui-block-b">Grupos:</div>
+                        <div class="tablas ui-block-c">Individual:</div>
+                        <div class="tablas ui-block-d">Grupos:</div>
+                        <div class="tablas ui-block-a">5 &#8364; persona</div>
+                        <div class="tablas ui-block-b">3 &#8364; persona</div>
+                        <div class="tablas ui-block-c">4 &#8364; persona</div>
+                        <div class="tablas ui-block-d">2 &#8364; persona</div>
+                    </div>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Aula educativa (sólo grupos):</h3>
+                    <div class="tablas ui-grid-b">
+                        <div class="tablas ui-block-a"></div>
+                        <div class="tablas ui-block-b">Temporada de Verano</div>
+                        <div class="tablas ui-block-c">Temporada de Invierno</div>
+                        <div class="ui-block-a">Horarios:</div>
+                        <div class="tablas ui-block-b">
+                            <p>9:00-10:00</p>
+                            <p>15:00-16:00</p>
+                        </div>
+                        <div class="tablas ui-block-c">
+                            <p>&nbsp;</p>
+                            <p>10:00-11:00</p>
+                        </div>
+                        <div class="tablas ui-block-a">Tarifas</div>
+                        <div class="tablas ui-block-b">25 &#8364;</div>
+                        <div class="tablas ui-block-c">25 &#8364;</div>
+                    </div>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Contacto</h3>
+                    <p>Si estás pensando visitar el parque con un grupo, por favor, rellena este formulario:</p>
+                    <form class="tablas">
+                        <div data-role="fieldcontain">
+                            <label for="nombre">Nombre:</label>
+                            <input name="nombre" id="nombre" type="text" data-clear-btn="true"/>
+                        </div>
+                        <div data-role="fieldcontain">
+                            <label for="email">Correo electrónico:</label>
+                            <input name="email" id="email" data-clear-btn="true"/>
+                        </div>
+                        <div data-role="fieldcontain">
+                            <label for="date">Fecha:</label>
+                            <input type="date" name="date" id="date" />
+                        </div>
+                        <div>
+                            Número de personas:
+                            <input type="range" name="slider" id="slider" value="0" min="0" max="100"/>
+                        </div>
+                        <div data-role="fieldcontain">
+                            <fieldset data-role="controlgroup">
+                                <legend>Edad del grupo:</legend>
+                                <input type="radio" name="radio0" id="radio0"/>
+                                <label for="radio0">De 5 a 8 años</label>
+                                <input type="radio" name="radio1" id="radio1" />
+                                <label for="radio1">De 9 a 14 años</label>
+                                <input type="radio" name="radio2" id="radio2" value="" />
+                                <label for="radio2">De 15 a 18 años</label>
+                                <input type="radio" name="radio3" id="radio3" value="" />
+                                <label for="radio3">Adultos</label>
+                            </fieldset>
+                        </div>
+                        <div data-role="fieldcontain">
+                            <fieldset data-role="controlgroup" data-type="horizontal">
+                                <legend></legend>
+                                <input type="checkbox" name="checkbox1" id="checkbox1" class="custom"/>
+                                <label for="checkbox1">Deseamos asistir al aula educativa (sólo niños).</label>
+                            </fieldset>
+                        </div>
+                        <div>
+                            <label for="textarea">Observaciones:</label>
+                            <textarea name="textarea" id="textarea" rows="8" cols="40"></textarea>
+                        </div>
+                        <a href="#popupConfirmar" class="ui-btn ui-corner-all ui-btn-inline" data-rel="popup">Enviar</a>
+                        <div data-role="popup" id="popupConfirmar" style="max-width:280px">
+                             <p>¿Seguro que quieres reservar?</p>
+                             <a class="ui-btn ui-icon-delete ui-btn-icon-left ui-btn-inline ui-corner-all"  data-rel="back">No</a><!-- ¡No añadir HREF en este enlace! -->
+                             <a class="ui-btn ui-icon-check ui-btn-icon-left ui-btn-inline ui-btn-b ui-corner-all" data-theme="false" href="#page">Si</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>Cuatrovientos</h4>
+        </div>
+    </div>
+
+    <!--PAGINA 1-->
+    <div id="page4" data-role="page">
+        <div data-role="header">
+            <a class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back">Atrás</a><!-- ¡No añadir HREF en este enlace! -->
+            <h1>Galería Fotográfica</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="collapsible-set">
+                <div data-role="collapsible">
+                    <h3>Foto1:</h3>
+                    <a href="#popup1" data-rel="popup" data-position-to="window" data-transition="fade">
+                        <img class="popphoto" src="images/foto1.jpg" alt="Foto1" style="width:30%">
+                    </a>
+                    <div data-role="popup" id="popup1" data-overlay-theme="b" data-theme="b" data-corners="false">
+                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">
+                        Cerrar</a>
+                        <p>Los habitantes del parque natural.</p>
+                        <img class="popphoto" src="images/foto1.jpg" style="max-height:512px;" alt="Foto1">
+                    </div>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Foto2:</h3>
+                    <a href="#popup2" data-rel="popup" data-position-to="window" data-transition="fade">
+                        <img class="popphoto" src="images/foto2.jpg" alt="Foto1" style="width:30%">
+                    </a>
+                    <div data-role="popup" id="popup2" data-overlay-theme="b" data-theme="b" data-corners="false">
+                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">
+                            Cerrar
+                        </a>
+                        <p>El final de un día.</p>
+                        <img class="popphoto" src="images/foto2.jpg" style="max-height:512px;" alt="Foto1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>Cuatrovientos</h4>
+        </div>
+    </div>
+</body>
 </html>
